@@ -20,7 +20,7 @@ body {
 }
 
 .iq {
-  width: 20rem;
+  width: 30rem;
   background: white;
   border-radius: 1rem;
   padding: 1rem;
@@ -36,8 +36,15 @@ body {
 }
 .iq h2 {
   margin-top: 1rem;
+  font-size: 1.6rem;
 }
 
 .iq p {
   margin: 1rem 0;
+}
+
+@media (max-width: 375px) {
+  .iq {
+    width: 90%;
+  }
 }
