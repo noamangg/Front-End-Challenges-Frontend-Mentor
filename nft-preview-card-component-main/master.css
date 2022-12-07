@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+
+* {
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  --Soft-blue: #8bacda;
+  --Cyan: #00fff7;
+  --white: #ffffff;
+
+  --main-BG: #0d192b;
+  --card-BG: #14253d;
+  --line: #2f415b;
+}
+
+html {
+  font-size: 18px;
+}
+body {
+background-color: var(--main-BG, #0d192b);
+height: 100vh;
+
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 2rem 1rem;
+}
+
+.card {
+width: 30%;
+background-color: var(--card-BG, #2f415b);
+padding: 1rem;
+border-radius: 1rem;
+}
+.card > .img {
+  position: relative;
+  cursor: pointer;
+}
+.card > .img img {
+  width: 100%;
+  border-radius: 1rem;
+  cursor: pointer;
+  display: flex;
+}
+
+.card > .img .green {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: var(--Cyan, #00fff7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: .6;
+  border-radius: 1rem;
+
+}
+
+.card > .img:hover .green {
+  display: flex;
+}
+
+.card > .img .green img {
+  width: 3rem;
+}
+
+.card > h2 {
+  color: var(--white, #ffffff);
+  margin: 1rem 0;
+  transition-duration: .3s;
+}
+.card > h2:hover {
+  --white: var(--Cyan, #00fff7);
+  cursor: pointer;
+}
+
+.card > p {
+  color: var(--Soft-blue);
+  margin-bottom: 1rem;
+}
+
+
+.card .price-mod {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line, #14253d);
+}
+.card .price-mod div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .2rem;
+}
+.card .price-mod .price {
+  color: var(--Cyan, #00fff7);
+}
+.card .price-mod .date {
+  color: var(--Soft-blue, #8bacda);
+}
+
+
+.card .avatar {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+.card .avatar img {
+  width: 2rem;
+  border: 1px solid var(--Soft-blue, #8bacda);
+  border-radius: 50%;
+}
+.card .avatar p {
+  color: var(--Soft-blue, #8bacda);
+}
+.card .avatar p span {
+  color: var(--white, #ffffff);
+  cursor: pointer;
+  transition-duration: .3s;
+}
+.card .avatar p span:hover {
+  --white: var(--Cyan, #00fff7);
+}
+
+@media (max-width:764px) {
+  .card {
+    width: 80%;
+  }
+}
+@media (max-width:375px) {
+  .card {
+    width: 99%;
+  }
+}
