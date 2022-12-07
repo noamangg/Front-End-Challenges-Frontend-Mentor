@@ -1,6 +1,3 @@
-# Front-End-Challenges-Frontend-Mentor
-This is the main repo for my projects on Frontendmentor, there are some separate projects with there reops
+# Frontend Mentor Challenges
 
-
-### Take A Lock !
-[01] [NFT Preview Card Component] ()
+[01] [NFT preview card component challenge on Frontend Mentor](https://noamangg.github.io/Front-End-Challenges-Frontend-Mentor/nft-preview-card-component-main/index.html). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
