@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;
+  margin: 0;
+
+  --paleBlueColor: #e0e8ff;
+  --BrightBlueColor: #3829e0;
+  --paleBlueLightColor: #f5f7ff;
+  --DesaturatedColor: #7280a7;
+  --DarkBlueColor: #1f2f56;
+  --marginBottom: 1rem;
+}
+
+body {
+  background-color: var(--paleBlueColor);
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+main>img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+
+}
+
+main section.order {
+  margin: 1rem; 
+  position: relative;
+  z-index: 1;
+  max-width: 450px;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+main section.order>img {
+  display: block;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  width: 100%;
+}
+
+main section.order .text {
+  padding: 2.7rem;
+  text-align: center;
+}
+
+.text h1 {
+  margin-bottom: var(--marginBottom, 1rem);
+  color: var(--DarkBlueColor, #1f2f56);
+}
+
+.text>p:first-of-type {
+  margin-bottom: var(--marginBottom, 1rem);
+  color: var(--DesaturatedColor, #7280a7);
+  line-height: 1.5;
+}
+
+.text .music {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--paleBlueLightColor, #f5f7ff);
+  border-radius: .5rem;
+  padding: 1rem;
+
+  margin-bottom: var(--marginBottom, 1rem);
+}
+
+.text .music .play {
+  display: flex;
+  gap: .5rem;
+
+}
+
+.text .music .play h3 {
+  color: var(--DarkBlueColor, #1f2f56);
+  font-size: 1rem;
+}
+
+.text .music .play p {
+  color: var(--DesaturatedColor, #7280a7);
+  font-size: .8rem;
+}
+
+.text .music .play .music-name {
+  display: grid;
+  align-items: start;
+  padding: .2rem;
+}
+
+.text .music>button {
+  padding: .5rem;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  color: var(--BrightBlueColor, #3829e0);
+  text-decoration: underline;
+}
+
+
+
+.text>button:first-of-type {
+  display: block;
+  width: 100%;
+  padding: 1rem .2rem;
+  border-radius: .5rem;
+  border: none;
+
+  color: var(--paleBlueLightColor, #f5f7ff);
+  background-color: var(--BrightBlueColor, #3829e0);
+  box-shadow: 0px 5px 22px #3829e0;
+
+}
+
+.text>button:first-of-type:hover,
+.text .music > button:hover {
+  --BrightBlueColor: rgb(56, 41, 224, 80%);
+}
+
+.text>button:last-of-type {
+  padding:  0.1rem 1rem;
+
+  margin-top: var(--marginBottom, 1rem);
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  color: var(--DesaturatedColor, #7280a7);
+}
+
+.text>button:last-of-type:hover {
+  color: var(--DarkBlueColor, #1f2f56);
+}
+
+
+button {
+  cursor: pointer;
+  transition: .2s;
+}
+
+@media (max-width: 375px) {
+  html {
+    font-size: 14px;
+  }
+  main section.order .text {
+    padding: 1.5rem;
+  }
+}
