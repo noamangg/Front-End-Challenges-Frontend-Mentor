@@ -42,6 +42,7 @@ body {
 .iq p {
   margin: 1rem 0;
   font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 @media (max-width: 375px) {

@@ -99,7 +99,7 @@ border-radius: 1rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: .2rem;
+  gap: .5rem;
 }
 .card .price-mod .price {
   color: var(--Cyan, #00fff7);
