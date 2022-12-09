@@ -5,7 +5,7 @@
   font-family: 'Outfit', sans-serif;
   box-sizing: border-box;
   margin: 0;
-  
+
   --Soft-blue: #8bacda;
   --Cyan: #00fff7;
   --white: #ffffff;
@@ -18,22 +18,72 @@
 
 body {
   width: 100%;
-  height: 100vh;
-  padding: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+
   background-color: var(--main-BG, #0d192b);
-  
+
   position: relative;
 
 }
+
+main {
+  padding: 2rem;
+}
+
 ul {
   list-style: none;
-  padding: 0 0 0 1rem;
-  text-align: center;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-content: start;
+  gap: 1rem;
+}
+
+ul li {
+  background-color: var(--card-BG, #14253d);
+  position: relative;
+  border-radius: .5rem;
+}
+
+ul li::before {
+  content: "New";
+
+  color: var(--Soft-blue);
+  padding: .2rem .5rem;
+  background-color: var(--card-BG);
+  font-weight: bold;
+  border-radius: .5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  animation-name: changeColor;
+  animation-duration: .8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+ul li img {
+  width: 100%;
+
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+ul li:nth-child(4) a {
+  animation-delay: .40s;
+}
+
+ul li:nth-child(3) a {
+  animation-delay: calc(.40s * 2);
+}
+
+ul li:nth-child(2) a {
+  animation-delay: calc(.40s * 3);
+}
+
+ul li:nth-child(1) a {
+  animation-delay: calc(.40s * 4);
 }
 
 a {
@@ -41,17 +91,19 @@ a {
   color: var(--Soft-blue);
   font-weight: bold;
   font-size: 1.5rem;
+  text-align: center;
   transition: .5s;
-  margin-bottom: .5rem;
+  padding: 1rem;
   display: block;
-  
+
   animation-name: changeColor;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
 }
+
 a:hover {
-  padding-left: 2rem;
+  font-size: 1.4rem;
   color: #00fff7;
 }
 
@@ -59,129 +111,50 @@ a:hover {
   a {
     font-size: 1.25rem;
   }
-}
 
-.points {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
-.points > div {
-  width: 1rem;
-  height: 1rem;
-  background-color: var(--Cyan);
-  border-radius: .2rem;
-  background-color: var(--Soft-blue);
-  position: absolute;
-  top: 2rem;
-  
-  animation-name: changeBGColor,moveDiv;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-.points > div:first-child {
-  left: 1rem;
-}
-.points > div:last-child {
-  right: 1rem;
-}
-
-ul li:nth-child(4) a {
-  animation-delay: .40s;
-}
-ul li:nth-child(3) a {
-  animation-delay: calc(.40s * 2);
-}
-ul li:nth-child(2) a {
-  animation-delay: calc(.40s * 3);
-}
-ul li:nth-child(1) a {
-  animation-delay: calc(.40s * 4);
-}
-
-body .name {
-  position: absolute;
-  bottom: 2rem;
-  color: white;
-  font-weight: bold;
-}
-
-body .name span {
-  mix-blend-mode: difference;
-  font-size: 1rem;
-  line-height: 1;
-}
-
-body .name::before {
-  width: 40px;
-  height: 100%;
-  padding: .25rem;
-  background-color: white;
-  content: "";
-  
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  transform: translateY(-50%);
-  
-  animation-name: NoamanName;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-  border-radius: .2rem;
-
-}
-
-
-
-
-@keyframes NoamanName {
-  0%, 100% {
-    right: -1rem;
-    
+  main {
+    padding: 1rem
   }
-  100% {
-    right: calc(100% - 40px + .5rem);
 
+  ul {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  ul li a {
+    font-size: 1rem;
+  }
+  ul li a:hover {
+    font-size: .8rem;
   }
 }
 
-@keyframes borderRad {
-  to {
-    border-top-left-radius: .5rem;
-    border-bottom-left-radius: .5rem;
-  }
-  from {
-    border-top-right-radius: .5rem;
-    border-bottom-right-radius: .5rem;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-}
 
 @keyframes changeColor {
   to {
     color: var(--Cyan, #00fff7);
   }
 }
-@keyframes changeBGColor {
-  to {
-    background-color: var(--Cyan, #00fff7);
-  }
+
+
+
+
+footer {
+  background-color: var(--card-BG, #14253d);
+
+  padding: 1rem 2rem;
+
 }
 
-@keyframes moveDiv {
-  from {
-    top: 1rem;
-  }
-  to {
-    top: calc(100% - 2rem);
-    border-radius: 50%;
-  }
+body .name {
+  color: var(--Soft-blue, #8bacda);
+  font-weight: bold;
+  position: relative;
 }
 
-
+body footer .name a {
+  /* mix-blend-mode: difference; */
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}

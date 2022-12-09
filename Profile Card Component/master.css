@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  
+  margin: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+--darkCyan: #19a2ae;
+--veryDarkDesaturated: #2d3248;
+--darkGrayishBlue: #6a6f81;
+--darkGray: #969696;
+}
+
+html {
+  font-size: 18px;
+}
+
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--darkCyan, #19a2ae);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > img:first-child {
+  position: absolute;
+  width: 50%;
+  top: -50%;
+  left: 0;
+}
+body > img:last-of-type {
+  position: absolute;
+  width: 50%;
+  bottom: -50%;
+  right: 0;
+}
+
+body main {
+  background-color: white;
+  border-radius: 1rem;
+  z-index: 1;
+}
+body main .img img {
+  border-top-right-radius: .5rem;
+  border-top-left-radius: .5rem;
+}
+
+body main .text {
+  padding: 2rem 2rem 0rem;
+  position: relative;
+  text-align: center;
+  color: var(--veryDarkDesaturated, #2d3248);
+  
+}
+
+body main .text img {
+  
+  position: absolute;
+  left: 50%;
+  top: -53.39px;
+  transform: translateX(-50%);
+  
+  border-radius: 50%;
+  border: 6px solid white;
+}
+
+body main .text h2 {
+  font-size: 1.2rem;
+  
+  margin-top: 2.5rem;
+}
+body main .text h2::after {
+  content: "26";
+  margin-left: .5rem;
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--darkGrayishBlue, #6a6f81);
+}
+body main .text > p {
+  color: var(--darkGrayishBlue, #6a6f81);
+  font-size: .8rem;
+  
+  margin: .6rem 0 1.2rem;
+}
+body main .status {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  
+  border-top: 1px solid #eee;
+}
+body main .status p {
+  font-size: .6rem;
+  color: var(--darkGrayishBlue, #6a6f81);
+}
+body main .status p::before {
+  content: attr(data-status);
+  display: block;
+  
+  font-weight: bold;
+  color: var(--veryDarkDesaturated, #2d3248);
+  font-size: 1rem;
+  margin-bottom: .2rem;
+}
