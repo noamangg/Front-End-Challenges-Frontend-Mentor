@@ -36,7 +36,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-content: start;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 ul li {
@@ -103,7 +103,6 @@ a {
 }
 
 a:hover {
-  font-size: 1.4rem;
   color: #00fff7;
 }
 
@@ -157,4 +156,8 @@ body footer .name a {
   line-height: 1;
   cursor: pointer;
   padding: 0;
+}
+body footer .name a span {
+  color: rgb(211, 23, 23);
+  color: var(--Soft-blue);
 }

@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+
+
+* {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  
+--moderateViolet: #7541c8;
+--darkGrayish: #48556a;
+--darkBlackish: #19212e;
+--white: #ffffff;
+
+--lightGray: #cfcfcf;
+--lightGrayish: #ecf2f8;
+  
+}
+html {
+  font-size: 13px;
+}
+body {
+  background-color: var(--lightGrayish, #ecf2f8);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  
+  padding: 4rem;
+}
+
+main section:first-child {
+  grid-column: span 2;
+  
+  position: relative;
+}
+main section:first-child > img {
+  position: absolute;
+  top: 0;
+  right: 20%;
+}
+main section:nth-child(2) {
+  --moderateViolet: var(--darkGrayish, #48556a)
+}
+main section:nth-child(3),
+main section:nth-child(4) {
+  grid-row: span 2;
+  --moderateViolet: var(--white, #fff);
+  color: #19212e;
+}
+main section:nth-child(3) > p:last-of-type,
+main section:nth-child(4) > p:last-of-type {
+  color: #707070;
+}
+
+main section:nth-child(5) {
+  grid-column: span 2;
+  background-color: var(--darkBlackish, #19212e);
+}
+
+main section {
+  color: var(--white);
+  border-radius: 1rem;
+  background-color: var(--moderateViolet, #7541c8);
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem
+}
+main section .info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
+}
+main section .info img {
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+main section .info .name h3 {
+  opacity: .5;
+  
+  font-size: 1rem;
+}
+main section > p:first-of-type {
+  font-size: 2rem;
+}
+main section > p:last-of-type {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--lightGray, #ecf2f8);
+}
+
+@media (max-width: 1080px) {
+  main {
+    grid-template-columns: repeat(1, 1fr);
+}
+main section {
+  height: fit-content;
+}
+main section:first-child {
+  grid-column: span 1;
+  order: 1;
+}
+main section:nth-child(2) {
+  order: 2;
+}
+main section:nth-child(3) {
+  order: 5;
+}
+main section:nth-child(4) {
+  order: 3;
+}
+
+main section:nth-child(3),
+main section:nth-child(4) {
+  grid-column: span 1;
+
+}
+
+main section:nth-child(5) {
+  grid-column: span 1;
+  order: 4;
+
+}
+
+}
+
+@media (max-width: 360px) {
+  main {
+    gap: 1rem;
+    padding: 1rem;
+  }
+  main section:first-child > img {
+    right: 10%;
+  }
+}
