@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+
+* {
+
+  
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  
+  font-family: 'Poppins', sans-serif;
+  --Red: #ea5353;
+  --Cyan: #45d3d3;
+  --Orange: #fcaf4a;
+  --Blue: #549ef2;
+
+  --VeryDarkBlue: #4c4e61;
+  --GrayishBlue: #a3a5ae;
+  --VeryLightGray: #fafafa;
+}
+html {
+  font-size: 15px;
+}
+main {
+  padding: 4rem;
+  background-color: var(--VeryLightGray, #fafafa);
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  
+}
+
+main .text {
+  text-align: center;
+  color: var(--VeryDarkBlue, #4c4e61);
+  
+ width: 42%;
+}
+main .text h1 {
+  font-weight: lighter;
+  font-size: 2.5rem;
+}
+
+main .text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+main .text p {
+  color: var(--GrayishBlue, #a3a5ae);
+}
+
+main .cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+}
+main .cards .card {
+  background-color: white;
+  padding: 2.5rem;
+  position: relative;
+  
+  display: flex;
+  flex-wrap: wrap;
+  
+  border-radius: .5rem;
+  border-top: .3rem solid var(--Blue, #549ef2);
+  
+  box-shadow: 0px 5px 10px #999ab3;
+}
+main .cards .card h3 {
+  color: #45465a;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+main .cards .card p {
+  color: var(--GrayishBlue, #a3a5ae);
+  margin-bottom: 3rem;
+}
+
+main .cards .card .img {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.card1, 
+.card3 {
+  align-self: center;
+  grid-row: span 2;
+}
+.card4 {
+  grid-area: 2 / 2;
+  --Blue: var(--Orange);
+}
+.card1 {
+  --Blue: var(--Cyan)
+}
+.card2 {
+  --Blue: var(--Red)
+}
+
+@media (max-width: 876px) {
+  main {
+    padding: 1rem;
+  }
+  main .text {
+   width: 75%;
+  }
+  main .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  main .cards .card {
+    padding: 1.5rem;
+  }
+
+.card1, 
+.card3 {
+  grid-row: span 1;
+  height: 100%;
+}
+}
+
+@media (max-width: 400px) {
+  main {
+    padding: 1rem;
+  }
+  main .text {
+   width: 100%;
+  }
+  main .cards {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+  main .cards .card {
+    padding: 2rem;
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+  
+  html {
+    font-size: 12px;
+  }
+}
+
+
