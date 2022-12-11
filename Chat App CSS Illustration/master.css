@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+
+  
+  
+  /* ! Colors */
+  
+--subHeadingColor: hsl(276, 100%, 81%);
+--chatOnLeftColor: hsl(276, 55%, 52%);
+--chatOnRightColor: hsl(271, 15%, 43%);
+--placeholderTextColor: #c6cacd;
+--mainHeadingColor: hsl(271, 36%, 24%);
+--paragraphColor: #a39daa;
+
+--whiteColor: #ffffff;
+--appBGColor: #f7f5fa;
+--submitButtonBGColor: hsl(271, 36%, 24%);
+--radioButtonOutlineColor: hsl(289, 100%, 72%);
+
+/* *Linear Gradient */
+--lightMagentaColor: hsl(293, 100%, 63%);
+--lightVioletColor: hsl(264, 100%, 61%);
+
+}
+
+body {
+
+
+  position: relative;
+}
+body main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: var(--whiteColor);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+body .illustration {
+  width: 40%;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+  gap: 5rem;
+
+}
+body .left-illustration {
+  top: 0;
+  left: -10%;
+  background: linear-gradient(to bottom, var(--lightMagentaColor), var(--lightVioletColor));
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+body .right-illustration {
+  background-color: var(--appBGColor);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  
+  bottom: -10%;
+  right: -20%;
+}
+
+body main section {
+  z-index: 1;
+}
+
+body main .phone {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--whiteColor);
+  padding: 1rem;
+}
+body main .phone .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 1rem;
+  padding-top: 4rem;
+  background: linear-gradient(to left, var(--lightMagentaColor), var(--lightVioletColor));
+  
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  
+  position: relative;
+}
+
+body main .phone .top::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 30%;
+  background-color: var(--whiteColor);
+  top: 0;
+  left: 50%;
+  border-radius: 25px;
+  transform: translateX(-50%);
+}
+
+body main .phone .top .profile {
+  display: flex;
+  align-items: center;
+  color: var(--whiteColor);
+  gap: 10px;
+}
+body main .phone .top .profile img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+/* *Text Box Style */
+
+.phone .text-box {
+  padding: 1rem;background-color: var(--appBGColor);
+}
+
+.phone .text-box > p {
+  color: red;
+}
