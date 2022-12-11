@@ -1,51 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Chat App Css Illustration | Frontend Mentor</title>
+  <link rel="stylesheet" href="master.css">
 </head>
+
 <body>
 
-  Samuel Green
-  Available to Walk
+  <main>
+    <div class="illustration left-illustration">
+    </div>
 
-  That sounds great. I’d be happy with that.
+    <section class="phone">
+      <div class="top">
+        <div class="profile">
+          <img src="images/avatar.jpg" alt="App Image">
+          <div class="name">
+            <h3>Samuel Green</h3>
+            <p>Available to Walk</p>
+          </div>
 
-  Could you send over some pictures of your dog, please?
+        </div>
+        <img src="images/favicon-32x32.png" alt="">
 
-  Here are a few pictures. She’s a happy girl!
+      </div>
 
-  Can you make it?
 
-  She looks so happy! The time we discussed works. How long shall I take her out for?
+      <div class="text-box">
+        <p class="left">That sounds great. I’d be happy with that.</p>
+        <p class="left">Could you send over some pictures of your dog, please?</p>
+        <div class="dogs-image right">
+          <img src="images/dog-image-1.jpg" alt="Dog Image">
+          <img src="images/dog-image-2.jpg" alt="Dog Image">
+          <img src="images/dog-image-3.jpg" alt="Dog Image">
+        </div>
+        <p class="right">Here are a few pictures. She’s a happy girl!</p>
+        <p class="right">Can you make it?</p>
+        <p class="left">She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+        <div class="check-box-price left">
 
-  30 minute walk
-  $29
+          <form action="">
+            <label for="price1">
+              <input type="radio" name="price" id="price1" value="29$">
+              <p>30 minute walk</p>
+              <p>$29</p>
+            </label>
 
-  1 hour walk
-  $49
+            <label for="price2">
+              <input type="radio" name="price" id="price2" value="49$">
+              <p>1 hour walk</p>
+              <p>$49</p>
+            </label>
+          </form>
 
-  Type a message…
+        </div>
+      </div>
+      <div class="send-box">
+        <input type="text" placeholder="Type a message…">
+        <img src="images/favicon-32x32.png" alt="send-image">
+      </div>
+    </section>
 
-  Simple booking
+    <section class="text">
+      <h1>Simple booking</h1>
+      <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to
+        discuss arrangements and make bookings. Once the walk has been completed you can rate
+        your walker and book again all through the chat.</p>
 
-  Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-  discuss arrangements and make bookings. Once the walk has been completed you can rate 
-  your walker and book again all through the chat.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    </section>
+
+    <div class="illustration right-illustration">
+    </div>
+  </main>
+
+
+
+
+
+
+
+
 </body>
+
 </html>
