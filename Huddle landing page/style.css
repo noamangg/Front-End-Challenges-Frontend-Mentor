@@ -1,0 +1,16 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+
+  --pink-color: #ff52bf;
+  --pale-cyan-color: #ebfbff;
+  --dark-cyan-color: #00252e;
+  --grayish-blue-color: #808d99;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 18px;
+}
