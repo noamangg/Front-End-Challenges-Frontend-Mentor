@@ -8,25 +8,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
   <title>Huddle Landing Page | Frontend Mentor</title>
 </head>
 
 <body>
 
   <header>
-    <img src="images/logo.svg" alt="logo" class="logo">
-    <nav>
-      <button class="butn header-butn">
-        Try It Free
-      </button>
-    </nav>
+    <div class="container flex justify-between">
+      <img src="images/logo.svg" alt="logo" class="logo">
+      <nav>
+        <button class="butn header-butn">
+          Try It Free
+        </button>
+      </nav>
+    </div>
   </header>
 
   <main>
 
     <section class="landing">
-      <div class="container">
+      <div class="container main-grid">
         <div class="text">
           <h1 class="text__header">Build The Community Your Fans Will Love</h1>
           <p class="text__pargraph">Huddle re-imagines the way we build communities. You have a voice, but so does your
@@ -39,15 +41,24 @@
 
     <section class="grow">
       <div class="container cards">
+
         <div class="card">
-          <h3>Grow Together</h3>
-          <p>Generate meaningful discussions with your audience and build a strong, loyal community.
-            Think of the insightful conversations you miss out on with a feedback form.</p>
+          <div class="card-text">
+            <h3 class="card__header">Grow Together</h3>
+            <p class="card__text">Generate meaningful discussions with your audience and build a strong, loyal community.
+              Think of the insightful conversations you miss out on with a feedback form.</p>
+          </div>
+          <img src="images/illustration-grow-together.svg" alt="image">
         </div>
+        
         <div class="card">
-          <h3 class="card__header">Flowing Conversations</h3>
-          <p class="card__text">Generate meaningful discussions with your audience and build a strong, loyal community.
-            Think of the insightful conversations you miss out on with a feedback form.</p>
+          <img src="images/illustration-flowing-conversation.svg" alt="image">
+          <div class="card-text">
+            <h3 class="card__header">Flowing Conversations</h3>
+            <p class="card__text">Generate meaningful discussions with your audience and build a strong, loyal
+              community.
+              Think of the insightful conversations you miss out on with a feedback form.</p>
+          </div>
         </div>
 
         <div class="card">
@@ -56,13 +67,14 @@
             <p class="card__text">It takes no time at all to integrate Huddle with your app's authentication solution.
               This means, once signed in to your app, your users can start chatting immediately.</p>
           </div>
+          <img src="images/illustration-your-users.svg" alt="">
         </div>
 
       </div>
 
       <div class="cta">
         <h4>Ready To Build Your Community?</h4>
-        <button>
+        <button class="butn">
           Get Started For Free
         </button>
       </div>
@@ -73,17 +85,16 @@
     <div class="container">
       <div class="footer_top">
         <div class="info">
-          <img src="images/logo.svg" alt="logo">
-          <div class="location">
+          <div class="location flex">
             <img src="images/icon-location.svg" alt="location">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua</p>
           </div>
-          <div class="phone">
+          <div class="phone flex">
             <img src="images/icon-phone.svg" alt="phone">
             <p>+1-543-123-4567</p>
           </div>
-          <div class="email">
+          <div class="email flex">
             <img src="images/icon-email.svg" alt="email">
             <p>example@huddle.com</p>
           </div>
@@ -103,15 +114,15 @@
         </ul>
 
 
-        <div class="social">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
+        <div class="social flex justify-between">
+          <img src="images/icon-email.svg" alt="email">
+          <img src="images/icon-location.svg" alt="location">
+          <img src="images/icon-phone.svg" alt="phone">
         </div>
       </div>
 
 
-      <div class="footer_foot">
+      <div class="footer_foot flex">
         <p>&copy; Copyright 2018 Huddle. All rights reserved.</p>
       </div>
     </div>

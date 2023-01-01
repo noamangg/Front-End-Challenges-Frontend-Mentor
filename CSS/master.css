@@ -350,6 +350,7 @@ header .container i {
   text-align: center;
   transition: var(--main-transition);
   transition: var(--main-transition, .25s);
+  overflow: hidden;
 }
 
 .projects li a:hover {
@@ -362,7 +363,6 @@ header .container i {
   border-top-right-radius: var(--main-radius, .25rem);
   display: block;
 }
-
 .projects li a p {
   color: var(--Soft-blue, #8bacda);
   font-weight: bold;
