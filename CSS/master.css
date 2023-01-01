@@ -45,6 +45,11 @@ a {
   position: absolute;
   top: 1rem;
   right: 1rem;
+  transition: var(--main-transition, .25ms);
+}
+
+.new:hover:before {
+  color: var(--Cyan, #00fff7);
 }
 
 .butn {
@@ -100,7 +105,7 @@ section {
   text-align: center;
   color: var(--Soft-blue, #8bacda);
   font-weight: bold;
-  font-size: clamp(1rem, 3vw, 4rem);
+  font-size: clamp(1.5rem, 3vw, 4rem);
   letter-spacing: 1rem;
   text-transform: capitalize;
   width: fit-content;
@@ -138,6 +143,12 @@ section {
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
   align-items: center;
+}
+@media (max-width: 767px) {
+  .text {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
 }
 
 .text .image img {
@@ -185,13 +196,22 @@ body {
 
 /* Section Header */
 
+/* body:has(header .container .show-nav:hover)::before {
+  background-color: red;
+  opacity: .9;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+} */
+
 header {
   background-color: var(--card-BG, #14253d);
   color: var(--Soft-blue, #8bacda);
   width: 100%;
   position: fixed;
   z-index: 999;
-  
 }
 
 header .container {
@@ -201,7 +221,6 @@ header .container {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  
   position: relative;
 }
 
@@ -210,7 +229,6 @@ header .container .logo {
   display: flex;
   transition: var(--main-transition, .25s);
 }
-
 header .container .logo span {
   animation: logo-animation var(--logo-animation) infinite linear alternate;
 }
@@ -233,20 +251,22 @@ header .container .logo span:nth-child(4) {
 header .container .links {
   display: flex;
   gap: 1rem;
-  margin-right: .5rem;
 }
 
 header .container .links li a {
   color: var(--Soft-blue, #8bacda);
-}
+  padding: .5rem 0;
 
+}
 header .container .links li a:hover {
   color: var(--Cyan, #00fff7);
-
 }
+
 header .container i {
   display: none;
 }
+
+
 
 @media (max-width: 767px) {
 
@@ -269,15 +289,17 @@ header .container i {
     background-color: var(--card-BG,#0d192b);
     padding: 1rem;
     transition: var(--main-transition, .25s);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
   }
   header .container .links li:is(:not(:last-of-type)) a{
     margin-bottom: 1px;
-
   }
   header .container .links li a:hover {
     padding-left: 2rem;
   }
-  header .container i:hover + .links {
+  header .container  i:hover + .links {
     display: block;
     background-color: var(--main-BG);
 
@@ -316,22 +338,11 @@ header .container i {
   height: fit-content;
   position: relative;
 }
-/* .projects::before,
-.projects::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 20px;
-  background-color: rebeccapurple;
-  top: 0;
-
+@media (max-width: 767px) {
+  .projects {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));   
+  }
 }
-.projects::before {
-  left: 0;
-}
-.projects::after {
-  right: 0;
-} */
 
 .projects li a {
   background-color: var(--card-BG, #14253d);
@@ -339,6 +350,7 @@ header .container i {
   text-align: center;
   transition: var(--main-transition);
   transition: var(--main-transition, .25s);
+  overflow: hidden;
 }
 
 .projects li a:hover {
@@ -351,7 +363,6 @@ header .container i {
   border-top-right-radius: var(--main-radius, .25rem);
   display: block;
 }
-
 .projects li a p {
   color: var(--Soft-blue, #8bacda);
   font-weight: bold;
@@ -373,6 +384,11 @@ header .container i {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
+}
+@media (max-width: 767px) {
+  .stats__stats .container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));   
+  }
 }
 
 .stat-card {
@@ -416,12 +432,16 @@ header .container i {
 
 .stat-card h5 {
   font-size: clamp(1.5rem, 3vw, 2rem);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .stat-card i {
   font-size: 3rem;
   margin-bottom: 2rem;
+  transition: calc(var(--main-transition, 25ms) * 2);
+}
+.stat-card:hover i {
+  transform: rotate(.5turn);
 }
 .stat-card p {
   font-size: 2rem;
@@ -569,10 +589,13 @@ footer .container {
 }
 
 footer .container a {
-  font-size: 1rem;
+  font-size: .8rem;
   cursor: pointer;
   padding: 0;
   color: var(--Soft-blue, #8bacda);
+}
+footer .container a:last-child {
+  opacity: .9;
 }
 
 footer .container a span {
@@ -593,10 +616,3 @@ footer .container a:hover span {
 
 }
 
-@media (max-width: 767px) {
-  .text {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-  
-}
